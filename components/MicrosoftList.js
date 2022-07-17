@@ -67,24 +67,24 @@ function MicrosoftList({id,tenantId,real_name}) {
     <div className='flex text-sm space-x-2'>
     <div><span className='font-bold'>name: </span>{real_name} </div>
 
-    <div class="relative inline-block text-left">
+    <div className="relative inline-block text-left">
     <div>
-    <button onClick={()=>handleClick()} type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none" id="menu-button" aria-expanded="true" aria-haspopup="true">
+    <button onClick={()=>handleClick()} type="button" className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none" id="menu-button" aria-expanded="true" aria-haspopup="true">
       {Day}
-      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
       </svg>
     </button>
   </div>
   {show && 
   <>
-  <div class=" z-40 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-300 ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-    <div class="py-1" role="none">
-      <a href="#" onClick={(e)=>mondayClick(e)} class="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabindex="-1" id="menu-item-0">MondayM</a>
-      <a href="#" onClick={(e)=>tuesdayClick(e)} class="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabindex="-1" id="menu-item-1">TuesdayM</a>
-      <a href="#" onClick={(e)=>wednesdayClick(e)} class="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabindex="-1" id="menu-item-2">WednesdayM</a>
-      <a href="#" onClick={(e)=>thursdayClick(e)} class="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabindex="-1" id="menu-item-2">ThursdayM</a>
-      <a href="#" onClick={(e)=>fridayClick(e)} class="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabindex="-1" id="menu-item-2">FridayM</a>
+  <div className=" z-40 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-300 ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+    <div className="py-1" role="none">
+      <a href="#" onClick={(e)=>mondayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-0">MondayM</a>
+      <a href="#" onClick={(e)=>tuesdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-1">TuesdayM</a>
+      <a href="#" onClick={(e)=>wednesdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">WednesdayM</a>
+      <a href="#" onClick={(e)=>thursdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">ThursdayM</a>
+      <a href="#" onClick={(e)=>fridayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">FridayM</a>
     </div>
   </div>
   </>}
