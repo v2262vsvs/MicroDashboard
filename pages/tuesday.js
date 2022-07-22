@@ -5,7 +5,7 @@ import UserRow from '../components/UserRow'
 function tuesday({data}) {
   return (
     <div className='ml-5 mr-5'>
-        <span className=" self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tuesday</span>
+        <span className=" flex justify-center text-xl font-semibold whitespace-nowrap dark:text-white">Tuesday</span>
         <div className='space-y-1'>{data.map(user =>
                 (
                     <div key={user.id}>

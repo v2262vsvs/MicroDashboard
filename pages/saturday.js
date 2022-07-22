@@ -2,10 +2,10 @@ import React from 'react'
 import UserRow from '../components/UserRow'
 
 
-function monday({data}) {
+function saturday({data}) {
   return (
-    <div className='ml-5 mr-5 '>
-        <div className="flex justify-center text-xl font-semibold whitespace-nowrap dark:text-white">Monday</div>
+    <div className='ml-5 mr-5'>
+        <span className=" flex justify-center text-xl font-semibold whitespace-nowrap dark:text-white">Saturday</span>
         <div className='space-y-1'>{data.map(user =>
                 (
                     <div key={user.id}>
@@ -33,18 +33,18 @@ function monday({data}) {
   )
 }
 
-export default monday
+export default saturday
 
 
 
 export async function getServerSideProps(context) {
-    const monday = await fetch('https://61vqrvqwn3.execute-api.us-east-1.amazonaws.com/staging2?day=MondayM', {
+    const saturday = await fetch('https://61vqrvqwn3.execute-api.us-east-1.amazonaws.com/staging2?day=SaturdayM', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-    const data = await monday.json()
+    const data = await saturday.json()
     if (!data) {
       return {
         notFound: true,
