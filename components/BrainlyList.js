@@ -53,7 +53,16 @@ function BrainlyList({id,first_name,  last_name,real_name,is_stranger,team_id}) 
     e.preventDefault();
     setShow(!show)
     setDay("FridayM")
-
+  }
+  const saturdayClick =(e)=>{
+    e.preventDefault();
+    setShow(!show)
+    setDay("SaturdayM")
+  }
+  const sundayClick =(e)=>{
+    e.preventDefault();
+    setShow(!show)
+    setDay("SundayM")
   }
 
 
@@ -93,6 +102,8 @@ function BrainlyList({id,first_name,  last_name,real_name,is_stranger,team_id}) 
       <a href="#" onClick={(e)=>wednesdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">WednesdayM</a>
       <a href="#" onClick={(e)=>thursdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">ThursdayM</a>
       <a href="#" onClick={(e)=>fridayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">FridayM</a>
+      <a href="#" onClick={(e)=>saturdayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">SaturdayM</a>
+      <a href="#" onClick={(e)=>sundayClick(e)} className="text-gray-700 block px-4 py-2 text-sm hover:text-gray-100" role="menuitem" tabIndex="-1" id="menu-item-2">SundayM</a>
     </div>
   </div>
   </>}
