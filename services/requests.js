@@ -117,15 +117,13 @@ export const onDelete = async (e,id,day) => {
   };
 
 
-  export const fetchMicrosoft = async (e) => {
-    e.preventDefault()
-    const response = await  fetch("https://www.fibofy.com/msteams-fibo/fetch-channel-users?channel=teams-bot", {
+  export const fetchMicrosoft = async () => {
+    const response = await fetch("https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=shared-brainly-2&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180", {
       "headers": {
         "accept": "*/*",
-        "authorization": "8a4bfadf32bfb287126fd9ef9ebac259ca32f132bd5cb4f8391edf9a69a06758",
         "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6",
-        "if-none-match": "W/\"8c25-Iq7/BKWXFQPJ4w4ndpXq30j3fY4\"",
-        "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"",
+        "if-none-match": "W/\"e03-7FkUdIv5POhB/p04qzfhaZDpREI\"",
+        "sec-ch-ua": "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"",
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "\"macOS\"",
         "sec-fetch-dest": "empty",
@@ -138,7 +136,6 @@ export const onDelete = async (e,id,day) => {
       "body": null,
       "method": "GET",
       "mode": "cors",
-      "credentials": "include"
     });
     if (!response.ok) {throw new Error(`Error: ${response.status}`);}
     const data = await response.json();
@@ -146,13 +143,11 @@ export const onDelete = async (e,id,day) => {
     return data
   }
 
-
   export const fetchBrainly = async () => {
     try{
-    const response = await  fetch("https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=pandacoachbot", {
+    const response = await  fetch("https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=pandacoachbot&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180", {
       "headers": {
         "accept": "*/*",
-        //"authorization": "8a4bfadf32bfb287126fd9ef9ebac259ca32f132bd5cb4f8391edf9a69a06758",
         "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6",
         "if-none-match": "W/\"fe12-PCwt+X8cSysVRIWpDu1m+L4zfZE\"",
         "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"",

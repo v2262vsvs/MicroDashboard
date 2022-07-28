@@ -4,11 +4,15 @@ import styles from '../styles/Home.module.css'
 import datashared from "../usersData/SharedBrainly"
 import datamicrosoft from "../usersData/Microsoft"
 import datapandatron from "../usersData/Pandatron"
+import { fetchBrainly, fetchMicrosoft } from '../services/requests'
 
-export default function Home() {
-  const dataShared = datashared
-  const dataMicrosoft = datamicrosoft
-  const dataPandatron = datapandatron
+export default function Home({dataShared,dataPandatron,dataMicrosoft}) {
+  //const dataShared = datashared
+  //const dataMicrosoft = datamicrosoft
+  //const dataPandatron = datapandatron
+  
+  
+  
 
   return (
     <div className={styles.container}>
@@ -30,4 +34,48 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const response = await fetch('https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=shared-brainly-2&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const dataShared = await response.json()
+  if (!dataShared) {
+    return {
+      notFound: true,
+    }
+  }
+  const response2 = await fetch('https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=pandacoachbot&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const dataPandatron = await response2.json()
+  if (!dataPandatron) {
+    return {
+      notFound: true,
+    }
+  }
+  const response3 = await fetch('  https://www.fibofy.com/msteams-fibo/fetch-channel-users?bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const dataMicrosoft = await response3.json()
+  if (!dataMicrosoft) {
+    return {
+      notFound: true,
+    }
+  }
+  return {
+    props: {
+      dataShared,dataPandatron,dataMicrosoft
+    }, // will be passed to the page component as props
+  }
 }

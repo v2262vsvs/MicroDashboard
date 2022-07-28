@@ -74,7 +74,7 @@ function ListsMenu({dataMicrosoft,dataShared,dataPandatron}) {
                     </svg>
                 </button>
                 <div className='space-y-2 '>{dataMicrosoft.data.map(user =>
-                (<>
+                (
                     <div key={user.id}>
                         <MicrosoftList
                             id={user.conv_id}
@@ -82,7 +82,6 @@ function ListsMenu({dataMicrosoft,dataShared,dataPandatron}) {
                             real_name={user.user.name}                  
                         />
                     </div>
-                </>
                 ))}</div>
                 </>
             }
@@ -103,7 +102,7 @@ function ListsMenu({dataMicrosoft,dataShared,dataPandatron}) {
                     </svg>
                 </button>
                 <div className='space-y-2 '>{dataPandatron.data.map(user =>
-                (<>
+                (
                     <div key={user.id}>
                         <PandatronList
                             id={user.id}
@@ -113,7 +112,7 @@ function ListsMenu({dataMicrosoft,dataShared,dataPandatron}) {
                             tz={user.tz}                        
                         />
                     </div>
-                </>
+                
                 ))}</div>
                 </>
             }
