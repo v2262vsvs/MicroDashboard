@@ -61,7 +61,7 @@ export async function getStaticProps(context) {
       notFound: true,
     }
   }
-  const response3 = await fetch('  https://www.fibofy.com/msteams-fibo/fetch-channel-users?channel=teams-bot&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
+  const response3 = await fetch('https://www.fibofy.com/msteams-fibo/fetch-channel-users?channel=teams-bot&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

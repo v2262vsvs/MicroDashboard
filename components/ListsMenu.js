@@ -6,7 +6,7 @@ import PandatronList from './PandatronList'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function ListsMenu({dataMicrosoft,dataShared,dataPandatron}) {
+function ListsMenu({dataMicrosoft,dataPandatron,dataShared}) {
     const[show,setShow]= useState(false)
     const[show2,setShow2]= useState(false)
     const[show3,setShow3]= useState(false)
