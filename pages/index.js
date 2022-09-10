@@ -36,7 +36,7 @@ export default function Home({dataShared,dataPandatron,dataMicrosoft}) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const response = await fetch('https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=shared-brainly-2&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
     method: 'GET',
     headers: {
