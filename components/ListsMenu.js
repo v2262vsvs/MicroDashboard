@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CulturedBrainList from './CulturedBrainList';
 
-function ListsMenu({dataMicrosoft,dataPandatron,dataShared,dataCulturedBrain}) {
+function ListsMenu({dataMicrosoft,dataPandatron,dataCulturedBrain}) {
     const[show,setShow]= useState(false)
     const[show2,setShow2]= useState(false)
     const[show3,setShow3]= useState(false)
@@ -27,7 +27,8 @@ function ListsMenu({dataMicrosoft,dataPandatron,dataShared,dataCulturedBrain}) {
   pauseOnFocusLoss={false}
   draggable={false}
   pauseOnHover={false}
-/>
+/>      
+{/* 
         {show==false
                 ?
                 <button onClick={()=>setShow(true)} className=' cursor-pointer flex place-self-center bg-gray-300 rounded-md px-2 py-1 hover:scale-105 hover:bg-gray-400 '>
@@ -59,6 +60,7 @@ function ListsMenu({dataMicrosoft,dataPandatron,dataShared,dataCulturedBrain}) {
                 ))}</div>
                 </>
             }
+            */}
 
             {show2==false
                 ?
