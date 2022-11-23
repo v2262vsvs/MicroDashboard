@@ -3,14 +3,14 @@ import { addUser } from '../services/requests'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function BrainlyList({id,first_name,  last_name,real_name,is_stranger,team_id}) {
+function BrainlyList({id,first_name,  last_name,real_name,email,team_id}) {
   const username = real_name
-  const email = ''
+  //const email = ''
   const hoursRef = useRef(null);
   const minutesRef = useRef(null);
   const sessionRef = useRef('');
   const[Day,setDay] = useState("Day")
-  const workspace = "shared-brainly-2"
+  const workspace = "brainly"
 
   const notifySuccess = () => toast.success('User added!', {
     position: "top-left",

@@ -6,7 +6,7 @@ import datamicrosoft from "../usersData/Microsoft"
 import datapandatron from "../usersData/Pandatron"
 import { fetchBrainly, fetchMicrosoft } from '../services/requests'
 
-export default function Home({dataPandatron,dataMicrosoft,dataCulturedBrain}) {
+export default function Home({dataPandatron,dataMicrosoft,dataCulturedBrain,dataBrainly}) {
   //const dataShared = datashared
   //const dataMicrosoft = datamicrosoft
   //const dataPandatron = datapandatron
@@ -25,7 +25,7 @@ export default function Home({dataPandatron,dataMicrosoft,dataCulturedBrain}) {
       <main className='ml-5 space-y-5 mb-10'>
       <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Micro Sessions</span>
 
-      <ListsMenu dataMicrosoft={dataMicrosoft} dataPandatron={dataPandatron}  dataCulturedBrain={dataCulturedBrain}/>
+      <ListsMenu dataMicrosoft={dataMicrosoft} dataPandatron={dataPandatron}  dataCulturedBrain={dataCulturedBrain} dataBrainly={dataBrainly}/>
         
       </main>
 
@@ -87,9 +87,21 @@ export async function getServerSideProps(context) {
       notFound: true,
     }
   }
+  const response5 = await fetch('https://www.fibofy.com/panda-sharedchannels/fetch-channel-users?channel=brainly&bypass=cc4d9d62ad12bb29cce8663cffdaf6e9026961cc81b8dfcf10d4683087403180', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const dataBrainly = await response5.json()
+  if (!dataBrainly) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: {
-      dataPandatron,dataMicrosoft,dataCulturedBrain
+      dataPandatron,dataMicrosoft,dataCulturedBrain,dataBrainly
     }, // will be passed to the page component as props
   }
 }
